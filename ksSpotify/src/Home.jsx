@@ -22,7 +22,9 @@ function Home() {
             <img src={logo2} alt="spotify" />
             KS Spotify
           </li>
-          <li>Home</li>
+          <li onClick={() => {
+            navigate("/Home");
+          }}>Home</li>
           <li>About</li>
         </ul>
       </nav>

@@ -17,8 +17,8 @@ import phirKabhi from "./songs/phirKabhi.mp3";
 import shayaraana from "./songs/shayaraana.mp4";
 import sawan from "./songs/sawan.mp3";
 import sunRaha from "./songs/sunRaha.mp3";
+import { useNavigate } from "react-router-dom";
 // import Tera from "./songs/Tera.mp3";
-
 
 import "./index.css";
 
@@ -26,11 +26,12 @@ const songs = [
   { title: "Phir Kabhi", duration: "05:34", src: phirKabhi, img: arijit02 }, //0
   { title: "Shayaraana", duration: "06:34", src: shayaraana, img: arijit03 }, //1
   { title: "Sawan Ayaa", duration: "05:34", src: sawan, img: arijit04 }, //2
-  { title: "Sun Raha hai", duration: "05:34", src: sunRaha, img: arijit05 },//3
+  { title: "Sun Raha hai", duration: "05:34", src: sunRaha, img: arijit05 }, //3
   // {title: "Tera Hone", duration: "04:00", src: Tera, img: arijit05}//4
 ];
 
 function App() {
+  const navigate = useNavigate();
   const audioRef = useRef(new Audio());
   const progressRef = useRef(null);
   const gifRef = useRef(null);
@@ -94,7 +95,14 @@ function App() {
             <img src={logo2} alt="spotify" />
             KS Spotify
           </li>
-          <li>Home</li>
+
+          <li
+            onClick={() => {
+              navigate("/Home");
+            }}
+          >
+            Home
+          </li>
           <li>About</li>
         </ul>
       </nav>

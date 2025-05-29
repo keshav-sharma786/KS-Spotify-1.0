@@ -19,6 +19,7 @@ import wavy from "./songs/wavy.mp3";
 import bars from "./songs/bars.mp3";
 import goat from "./songs/goat.mp3";
 import winning from "./songs/winning.mp3";
+import { useNavigate } from "react-router-dom";
 
 import "./Karan.css";
 
@@ -31,6 +32,7 @@ const songs = [
 ];
 
 function Karan() {
+  const navigate = useNavigate();
   const audioRef = useRef(new Audio());
   const progressRef = useRef(null);
   const gifRef = useRef(null);
@@ -94,7 +96,9 @@ function Karan() {
             <img src={logo2} alt="spotify" />
             KS Spotify
           </li>
-          <li>Home</li>
+          <li onClick={() => {
+            navigate("/Home");
+          }}>Home</li>
           <li>About</li>
         </ul>
       </nav>

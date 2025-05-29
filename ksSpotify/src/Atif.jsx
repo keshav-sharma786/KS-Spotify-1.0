@@ -7,7 +7,6 @@ import {
   faPauseCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-
 import atif3 from "./images/atif3.jpg";
 import atif2 from "./images/atif2.png";
 import playing from "./images/playing.gif";
@@ -15,6 +14,7 @@ import logo2 from "./images/logo2.jpg";
 
 import Tera from "./songs/Tera.mp3";
 import j from "./songs/j.mp3";
+import { useNavigate } from "react-router-dom";
 
 import "./Atif.css";
 
@@ -24,6 +24,7 @@ const songs = [
 ];
 
 function Atif() {
+  const navigate = useNavigate();
   const audioRef = useRef(new Audio());
   const progressRef = useRef(null);
   const gifRef = useRef(null);
@@ -87,7 +88,13 @@ function Atif() {
             <img src={logo2} alt="spotify" />
             KS Spotify
           </li>
-          <li>Home</li>
+          <li
+            onClick={() => {
+              navigate("/Home");
+            }}
+          >
+            Home
+          </li>
           <li>About</li>
         </ul>
       </nav>

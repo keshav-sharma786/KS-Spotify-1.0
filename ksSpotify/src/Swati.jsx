@@ -20,6 +20,7 @@ import logo2 from "./images/logo2.jpg";
 // import winning from "./songs/winning.mp3";
 import Ram from "./songs/Ram.mp3";
 import ram2 from "./songs/ram2.mp4";
+import { useNavigate } from "react-router-dom";
 
 import "./Swati.css";
 
@@ -29,6 +30,7 @@ const songs = [
 ];
 
 function Swati() {
+  const navigate = useNavigate();
   const audioRef = useRef(new Audio());
   const progressRef = useRef(null);
   const gifRef = useRef(null);
@@ -92,7 +94,9 @@ function Swati() {
             <img src={logo2} alt="spotify" />
             KS Spotify
           </li>
-          <li>Home</li>
+          <li onClick={() => {
+            navigate("/Home");
+          }}>Home</li>
           <li>About</li>
         </ul>
       </nav>
