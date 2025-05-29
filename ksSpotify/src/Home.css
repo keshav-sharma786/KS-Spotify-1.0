@@ -1,0 +1,274 @@
+body {
+  background-color: #06170e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-family: cursive;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+  /* height: 11vh; */
+  height: 75px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+nav ul li {
+  padding: 0 12px;
+}
+
+.brand img {
+  height: 65px;
+  width: 97px;
+  /* width: 7vw; */
+  /* border-radius: 15px; */
+  padding: 0 8px;
+  border-radius: 20px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.container {
+  position: relative;
+  min-height: 180vh;
+  background-color: black;
+  color: whitesmoke;
+  font-family: cursive;
+  display: flex;
+  width: 80%;
+  margin: 23px auto;
+  border-radius: 12px;
+  padding: 34px;
+  background-image: url("./images/arijit05.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 0.1px rgba(255, 255, 255, 0.4) solid;
+}
+
+.container::after,
+.container::before {
+  content: "";
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  position: absolute;
+  top: -2px;
+  border-radius: 5px;
+  left: -2px;
+  z-index: -1;
+  animation: animated-shadow 10s linear infinite alternate;
+}
+
+.container::after {
+  filter: blur(30px);
+}
+
+@keyframes animated-shadow {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+
+.image {
+  height: 700px;
+  width: 700px;
+  border-radius: 50%;
+  border: 0.1px solid transparent; /* keep it clean */
+  position: relative;
+  z-index: 1;
+  animation: rainbowGlow 2s linear infinite;
+  box-shadow: 0 0 15px 5px red;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-container img {
+  margin-top: 5rem;
+  margin-left: 5rem;
+}
+
+/* Keyframe for rainbow shimmer */
+@keyframes rainbowGlow {
+  0% {
+    box-shadow: 0 0 20px red, 0 0 30px orange;
+  }
+  20% {
+    box-shadow: 0 0 20px orange, 0 0 30px yellow;
+  }
+  40% {
+    box-shadow: 0 0 20px yellow, 0 0 30px green;
+  }
+  60% {
+    box-shadow: 0 0 20px green, 0 0 30px blue;
+  }
+  80% {
+    box-shadow: 0 0 20px blue, 0 0 30px violet;
+  }
+  100% {
+    box-shadow: 0 0 20px violet, 0 0 30px red;
+  }
+}
+
+#image2 {
+  margin-top: 5rem;
+}
+
+.heading {
+  font-family: cursive;
+  color: antiquewhite;
+  margin-left: 43rem;
+}
+
+.footer {
+  height: 5rem;
+  background: black;
+
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer h3 {
+  font-family: cursive;
+  color: antiquewhite;
+  margin-top: 10px;
+}
+
+/* Base responsive adjustments */
+.container {
+  width: 90%;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+.image {
+  height: 80vw;
+  width: 80vw;
+  max-height: 640px;
+  max-width: 640px;
+  margin: auto;
+}
+
+/* Responsive text alignment */
+.heading {
+  text-align: center;
+  margin-left: 0;
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+}
+
+
+/* For devices up to 768px wide (tablets and large phones) */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .brand img {
+    height: 55px;
+    width: 80px;
+  }
+
+  .brand {
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .container {
+    min-height: 60vh;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .image {
+    height: 60vw;
+    width: 60vw;
+    max-height: 400px;
+    max-width: 400px;
+    margin-bottom: 1rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+}
+
+/* For smaller devices up to 480px wide (phones) */
+@media screen and (max-width: 480px) {
+  .image {
+    height: 85vw;
+    width: 85vw;
+    max-height: 350px;
+    max-width: 350px;
+  }
+
+  .footer h3 {
+    font-size: 0.8rem;
+  }
+
+  .heading {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+
+  nav ul li {
+    padding: 5px 0;
+  }
+
+  .container {
+    font-size: 0.85rem;
+    padding: 15px;
+  }
+}

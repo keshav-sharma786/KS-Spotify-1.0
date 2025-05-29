@@ -1,0 +1,174 @@
+body {
+    background-color: #06170e;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    font-family: cursive;
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    /* height: 11vh; */
+    height: 75px;
+    background-color: black;
+    color: whitesmoke;
+  }
+  
+  nav ul li {
+    padding: 0 12px;
+  }
+  
+  .brand img {
+    height: 65px;
+    width: 97px;
+    /* width: 7vw; */
+    /* border-radius: 15px; */
+    padding: 0 8px;
+    border-radius: 20px;
+  }
+  
+  .brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+  }
+  
+  .container3 {
+    position: relative;
+    min-height: 220vh;
+    background-color: black;
+    color: whitesmoke;
+    font-family: cursive;
+    display: flex;
+    width: 80%;
+    margin: 23px auto;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url("./images/swati.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 0.1px rgba(255, 255, 255, 0.4) solid;
+  }
+  
+  .container3::after,
+  .container3::before {
+    content: "";
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(
+      45deg,
+      #fb0094,
+      #0000ff,
+      #00ff00,
+      #ffff00,
+      #ff0000,
+      #fb0094,
+      #0000ff,
+      #00ff00,
+      #ffff00,
+      #ff0000
+    );
+    background-size: 400%;
+    position: absolute;
+    top: -2px;
+    border-radius: 5px;
+    left: -2px;
+    z-index: -1;
+    animation: animated-shadow 10s linear infinite alternate;
+  }
+  
+  .container3::after {
+    filter: blur(30px);
+  }
+  
+  @keyframes animated-shadow {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 100% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .bottom {
+    position: sticky;
+    height: 70px;
+    background-color: black;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: whitesmoke;
+  }
+  
+  #myProgressBar {
+    width: 80vw;
+    text-align: center;
+  }
+  
+  .icons {
+    color: whitesmoke;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .songItem {
+    height: 50px;
+    display: flex;
+    background-color: antiquewhite;
+    width: 90%;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 34px;
+  }
+  
+  /* adding glittering effect to songItem as well */
+  
+  .songItem img {
+    width: 40px;
+    margin: 0 23px;
+    height: 40px;
+    border-radius: 34px;
+  }
+  
+  .timestamp {
+    margin: 0 23px;
+    cursor: pointer;
+  }
+  
+  .songList .songItem {
+    margin-top: 3rem;
+  }
+  
+  .songInfo img {
+    width: 42px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  
+  .songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: cursive;
+  }
+
+  
