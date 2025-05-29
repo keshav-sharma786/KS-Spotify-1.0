@@ -2,7 +2,7 @@
 import "./Home.css";
 import logo2 from "./images/logo2.jpg";
 import arijit02 from "./images/arijit02.jpg";
-import atif03 from "./images/atif3.jpg";
+import darshan from "./images/darshan.jpg";
 // import jubin from "./images/jubin.jpg";
 import ayushman from "./images/ayushman.jpg";
 import agam from "./images/agam.jpg";
@@ -46,10 +46,10 @@ function Home() {
         {/* <br /> <br /> <br /> <br /> <br /> */}
         <img
           onClick={() => {
-            navigate("/atif");
+            navigate("/darshan");
           }}
           className="image"
-          src={atif03}
+          src={darshan}
           alt="Atif"
         />
         {/* <br /> <br /> <br /> <br /> */}
@@ -71,7 +71,7 @@ function Home() {
         />
         <img
           onClick={() => {
-            navigate("/coming");
+            navigate("/vishal");
           }}
           className="image"
           src={vishal}
