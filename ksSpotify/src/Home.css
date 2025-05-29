@@ -8,7 +8,7 @@ body {
 }
 
 nav {
-  font-family: cursive;
+  font-family: sans-serif;
 }
 
 nav ul {
@@ -48,7 +48,7 @@ nav ul li {
   min-height: 180vh;
   background-color: black;
   color: whitesmoke;
-  font-family: cursive;
+  font-family: sans-serif;
   display: flex;
   width: 80%;
   margin: 23px auto;
@@ -162,7 +162,7 @@ nav ul li {
 }
 
 .heading {
-  font-family: cursive;
+  font-family: sans-serif;
   color: antiquewhite;
   margin-left: 43rem;
 }
@@ -182,7 +182,7 @@ nav ul li {
 }
 
 .footer h3 {
-  font-family: cursive;
+  font-family: sans-serif;
   color: antiquewhite;
   margin-top: 10px;
 }
@@ -208,6 +208,10 @@ nav ul li {
   margin-left: 0;
   margin-top: 1.5rem;
   font-size: 1.8rem;
+}
+
+* {
+  font-family: sans-serif;
 }
 
 /* For devices up to 768px wide (tablets and large phones) */
