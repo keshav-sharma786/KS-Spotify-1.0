@@ -106,11 +106,12 @@ nav ul li {
   }
 }
 
-
-
 .image {
   height: 700px;
   width: 700px;
+  /* height: auto;
+  margin-left: 30px;
+  margin-right: 10px; */
   border-radius: 50%;
   border: 0.1px solid transparent; /* keep it clean */
   position: relative;
@@ -121,14 +122,17 @@ nav ul li {
 
 .main-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-between; /* or space-between, flex-start, etc. */
+  gap: 20px; /* adds spacing between images */
+  padding: 20px;
 }
 
-.main-container img {
-  margin-top: 5rem;
-  margin-left: 5rem;
+.main-container .image {
+  margin-top: 4rem;
+  /* margin-left: 40px;
+  margin-right: 20px; */
+  margin-left: 40px;
 }
 
 /* Keyframe for rainbow shimmer */
@@ -206,69 +210,28 @@ nav ul li {
   font-size: 1.8rem;
 }
 
-
 /* For devices up to 768px wide (tablets and large phones) */
-@media screen and (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .brand img {
-    height: 55px;
-    width: 80px;
-  }
-
-  .brand {
-    justify-content: center;
-    font-size: 1.1rem;
+@media (max-width: 767px) {
+  nav {
+    width: 110%;
   }
 
   .container {
-    min-height: 60vh;
+    width: 90%;
+
+    min-height: 100vh !important;
+    height: auto !important;
     padding: 20px;
-    font-size: 0.9rem;
+    left: 5%;
   }
 
-  .image {
-    height: 60vw;
-    width: 60vw;
-    max-height: 400px;
-    max-width: 400px;
-    margin-bottom: 1rem;
-  }
-
-  .heading {
-    font-size: 1.5rem;
+  .footer {
+    width: 110%;
   }
 }
 
-/* For smaller devices up to 480px wide (phones) */
-@media screen and (max-width: 480px) {
-  .image {
-    height: 85vw;
-    width: 85vw;
-    max-height: 350px;
-    max-width: 350px;
-  }
-
-  .footer h3 {
-    font-size: 0.8rem;
-  }
-
-  .heading {
-    font-size: 1.3rem;
-    margin-top: 1rem;
-  }
-
-  nav ul li {
-    padding: 5px 0;
-  }
-
-  .container {
-    font-size: 0.85rem;
-    padding: 15px;
+@media (min-width: 768px) {
+  .main-container .image {
+    margin-left: auto;
   }
 }

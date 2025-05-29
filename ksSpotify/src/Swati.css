@@ -8,7 +8,7 @@ body {
   }
   
   nav {
-    font-family: cursive;
+    font-family: sans-serif;
   }
   
   nav ul {
@@ -48,7 +48,7 @@ body {
     min-height: 220vh;
     background-color: black;
     color: whitesmoke;
-    font-family: cursive;
+    font-family: sans-serif;
     display: flex;
     width: 80%;
     margin: 23px auto;
@@ -171,4 +171,34 @@ body {
     font-family: cursive;
   }
 
-  
+  @media (max-width: 767px) {
+  .bottom {
+    width: 110%;
+    text-align: center;
+  }
+
+  nav {
+    width: 110%;
+  }
+
+  .songInfo {
+    display: none;
+  }
+
+  .container3 {
+    width: 90%;
+
+    min-height: 140vh !important;
+    height: auto !important;
+    padding: 20px;
+    left: 5%;
+  }
+
+  /* .songItem {
+    margin-top: 1px;
+  } */
+
+  /* .songItemContainer .songItem {
+    margin-top: 1rem;
+  } */
+}

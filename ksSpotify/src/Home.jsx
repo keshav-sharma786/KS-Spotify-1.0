@@ -31,7 +31,7 @@ function Home() {
       <h1 className="heading">Singers</h1>
       <br /> <br /> <br />
       <div className="main-container">
-        <div>
+        
         <img
           onClick={() => {
             navigate("/app");
@@ -40,7 +40,7 @@ function Home() {
           src={arijit02}
           alt="Arijit"
         />
-        </div>
+        
         {/* <br /> <br /> <br /> <br /> <br /> */}
         <img
           onClick={() => {
