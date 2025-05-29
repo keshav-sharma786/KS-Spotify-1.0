@@ -18,7 +18,7 @@ const Login = () => {
     const userData = { email, password };
     localStorage.setItem("spotifyUser", JSON.stringify(userData));
 
-    alert("Login successful! User data saved in localStorage.");
+    alert("Welcome To KS Spotify");
 
     setEmail("");
     setPassword("");
