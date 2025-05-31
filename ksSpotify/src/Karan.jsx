@@ -19,6 +19,7 @@ import wavy from "./songs/wavy.mp3";
 import bars from "./songs/bars.mp3";
 import goat from "./songs/goat.mp3";
 import winning from "./songs/winning.mp3";
+import jatt from "./songs/jatt.mp3";
 import { useNavigate } from "react-router-dom";
 
 import "./Karan.css";
@@ -28,7 +29,7 @@ const songs = [
   { title: "52 Bars", duration: "02:34", src: bars, img: karan2 }, //1
   { title: "goat", duration: "03:34", src: goat, img: karan2 }, //2
   { title: "winning", duration: "02:34", src: winning, img: karan2 }, //3
-  
+  {title: "jatt", duration: "3:35", src: jatt, img: karan2} // 4
 ];
 
 function Karan() {
